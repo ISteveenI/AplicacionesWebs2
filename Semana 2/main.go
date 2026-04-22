@@ -1,6 +1,5 @@
 package main
 
-<<<<<<< HEAD
 import (
 	"fmt"
 )
@@ -124,7 +123,6 @@ func CrearPedido(clientes []Cliente, productos []Producto) {
 	fmt.Print("Cantidad: ")
 	fmt.Scan(&cantidad)
 
-	// validar stock
 	if productos[pIndex].Stock < cantidad {
 		fmt.Println("No hay suficiente stock")
 		return
@@ -132,7 +130,6 @@ func CrearPedido(clientes []Cliente, productos []Producto) {
 
 	total := float64(cantidad) * productos[pIndex].Precio
 
-	// validar saldo
 	if clientes[cIndex].Saldo < total {
 		fmt.Println("Saldo insuficiente")
 		return
@@ -200,72 +197,3 @@ func main() {
 	fmt.Println("\nEstado final de productos:")
 	ListarProductos(productos)
 }
-=======
-import "fmt"
-
-func main() {
-
-	var age int
-	fmt.Println("Enter your age:")
-	fmt.Scanln(&age)
-	//go conditionals
-	if age >= 18 {
-		fmt.Println("You are an adult")
-	} else {
-		fmt.Println("You are a minor")
-	}
-
-	// go switch
-	var diaDeLaSemana int = 1
-	switch diaDeLaSemana {
-	case 1:
-		fmt.Println("Monday")
-	case 2:
-		fmt.Println("Tuesday")
-	case 3:
-		fmt.Println("Wednesday")
-	case 4:
-		fmt.Println("Thursday")
-	case 5:
-		fmt.Println("Friday")
-	case 6:
-		fmt.Println("Saturday")
-	case 7:
-		fmt.Println("Sunday")
-	default:
-		fmt.Println("Invalid day")
-	}
-
-	// different types of for
-
-	for i := 0; i < 10; i++ {
-		fmt.Println(i)
-	}
-	for i := range 10 {
-		fmt.Println(i)
-	}
-	for i, value := range []int{1, 2, 3, 4, 5} {
-		fmt.Println(value)
-		fmt.Println(i)
-	}
-	for _, value := range []int{1, 2, 3, 4, 5} {
-		fmt.Println(value)
-	}
-	numeros := []int{1, 2, 33, 4, 50}
-	for _, numero := range numeros {
-		fmt.Println(numero)
-	}
-
-	for {
-		fmt.Println("Infinite loop")
-		break
-	}
-	i := 0
-	for i < 10 {
-		fmt.Println(i)
-		i++
-	}
-
-}
-
->>>>>>> 04b0ab7d3cc8d71dda99859888301d003d4f2a41
